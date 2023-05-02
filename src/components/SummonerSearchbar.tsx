@@ -37,7 +37,7 @@ const SearchSummoner: FC<SummonerSearchbarProps> = ({}) => {
       }
       setError('summonerName', { message: 'Something went wrong.' })
     } finally {
-      setIsLoading(true)
+      setIsLoading(false)
     }
   }
 
@@ -79,11 +79,13 @@ const SearchSummoner: FC<SummonerSearchbarProps> = ({}) => {
           <Button
           isLoading={isLoading}
             type="submit"
-            className="h-full inline-block rounded bg-gradient-to-r from-pink-500 via-rose-600-500 to-teal-500 p-[1px] hover:text-white focus:outline-none focus:ring active:text-opacity-75"
+            variant={"special"}
+            size={"special"}
           >
-            <span className="text-2xl block rounded-md bg-[#131313] text-white px-8 py-2 font-medium hover:bg-transparent">
+            {isLoading ? null : <span className="text-2xl block rounded-md bg-[#131313] text-white px-8 py-2 font-medium hover:bg-transparent">
               Hunt
-            </span>
+            </span>}
+            
           </Button>
         </div>
       </form>

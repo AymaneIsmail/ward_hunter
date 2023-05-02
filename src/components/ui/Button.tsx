@@ -10,11 +10,13 @@ export const buttonVariants = cva(
       variant: {
         default: 'bg-black text-white hover:bg-slate-950',
         ghost: 'bg-transparent hover:text-slate-900 hover:bg-slate-200',
+        special: 'inline-block rounded bg-gradient-to-r from-pink-500 via-rose-600-500 to-teal-500 p-[1px] hover:text-white focus:outline-none focus:ring active:text-opacity-75'
       },
       size: {
         default: 'h-10 py-2 px-4',
         sm: 'h-9 px-2',
         lg: 'h-11 px-8',
+        special: 'h-full'
       },
     },
     defaultVariants: {
@@ -46,23 +48,10 @@ const Button: FC<ButtonProps> = ({
       {isLoading ? <Loader2 className='mr-2 h-4 w-4 animate-spin' /> : null}
       {children}
     </button>
+
+
   )
 }
 
 export default Button
 
-// <button
-//   className={cn(buttonVariants({ variant, size, className }))}
-//   disabled={isLoading}
-//   {...props}
-// >
-//   {isLoading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : null}
-
-//   {variant == 'black' && size == 'full' ? (
-//     <span className="text-2xl block rounded-md bg-[#131313] text-white px-8 py-2 font-medium hover:bg-transparent">
-//       {children}
-//     </span>
-//   ) : (
-//     children
-//   )}
-// </button>
