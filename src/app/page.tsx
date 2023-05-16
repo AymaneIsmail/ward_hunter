@@ -1,3 +1,4 @@
+import FindTeammates from '@/components/FindTeammates'
 import Navbar from '@/components/Navbar'
 import SearchSummoner from '@/components/SummonerSearchbar'
 import Button from '@/components/ui/Button'
@@ -27,9 +28,9 @@ export default function Home() {
             <SearchSummoner />
         </div>
       </section>
-      <Button isLoading={true } variant='ghost'>
-        add
-      </Button>
+      {/* <section className="max-w-xl mx-auto">
+      <FindTeammates />
+      </section> */}
     </div>
   )
 }

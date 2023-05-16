@@ -77,15 +77,16 @@ const SearchSummoner: FC<SummonerSearchbarProps> = ({}) => {
           />
 
           <Button
-          isLoading={isLoading}
+            isLoading={isLoading}
             type="submit"
-            variant={"special"}
-            size={"special"}
+            variant={'special'}
+            size={'special'}
           >
-            {isLoading ? null : <span className="text-2xl block rounded-md bg-[#131313] text-white px-8 py-2 font-medium hover:bg-transparent">
-              Hunt
-            </span>}
-            
+            {isLoading ? null : (
+              <span className="text-2xl block rounded-md bg-[#131313] text-white px-8 py-2 font-medium hover:bg-transparent">
+                Hunt
+              </span>
+            )}
           </Button>
         </div>
       </form>
